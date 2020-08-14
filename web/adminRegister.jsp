@@ -3,6 +3,7 @@
     <head>
         <meta charset="ISO-8859-1">
         <title>Hospital Management System</title>
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet"
@@ -20,7 +21,7 @@
         src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script
         src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/register.css" type="text/css" />
     </head>
     <style type="text/css">
         body {
@@ -61,7 +62,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        
+
                     </li>
                 </div>
             </div>
@@ -71,31 +72,42 @@
                 <b>Hospital Management System</b>
             </h1>
         </div>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <!-- Tabs Titles -->
-                <h2>User Login</h2>
-                <!-- Icon -->
-                <div class="fadeIn first">
-
+        <form action="<%=request.getContextPath()%>/AdminRegister" method="post">
+            <!-- Sign up form -->
+            <section class="signup">
+                <div class="container">
+                    <div class="signup-content">
+                        <div class="signup-form">
+                            <h2 class="form-title">Sign up</h2>
+                            <form method="POST" class="register-form" id="register-form">
+                                <div class="form-group">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input type="email" name="email" id="email" placeholder="Your Email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="pass" id="pass" placeholder="Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                    <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="signup-image">
+                            <figure><img src="img/signup-image.jpg" alt="sing up image"></figure>
+                            <a href="adminLogin.jsp" class="signup-image-link">I am already member</a>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Login Form -->
-                <form action="<%=request.getContextPath()%>/UserLogin" method="post">
-                    <input type="text" id="Username" class="fadeIn second" name="username"
-                           placeholder="Username"> 
-                    <input type="password" id="password"
-                           class="fadeIn third" name="password" placeholder="password"> 
-                    <input
-                        type="submit" class="fadeIn fourth" value="Log In">
-                </form>
-
-                <!-- Remind Passowrd -->
-                <div id="formFooter">
-                    <a class="underlineHover" href="userRegister.jsp">Create Account</a>
-                </div>
-
-            </div>
-        </div>
+            </section>
+        </form>
     </body>
 </html>

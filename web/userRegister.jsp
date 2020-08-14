@@ -81,18 +81,20 @@
                 </div>
 
                 <!-- Login Form -->
-                <form action="<%=request.getContextPath()%>/UserLogin" method="post">
-                    <input type="text" id="Username" class="fadeIn second" name="username"
-                           placeholder="Username"> 
+                <form action="<%=request.getContextPath()%>/UserRegister" method="post">
+                    <input type="text" id="Username" class="fadeIn second" name="Username"
+                           placeholder="Enter Username"> 
                     <input type="password" id="password"
-                           class="fadeIn third" name="password" placeholder="password"> 
+                           class="fadeIn third" name="password" placeholder="Enter Password"> 
+                    <input type="password" id="password"
+                           class="fadeIn third" name="repassword" placeholder="Enter Password Again"> 
                     <input
                         type="submit" class="fadeIn fourth" value="Log In">
                 </form>
 
                 <!-- Remind Passowrd -->
                 <div id="formFooter">
-                    <a class="underlineHover" href="userRegister.jsp">Create Account</a>
+                    <a class="underlineHover" href="index.jsp">Log in</a>
                 </div>
 
             </div>

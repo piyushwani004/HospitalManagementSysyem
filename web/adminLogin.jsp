@@ -3,6 +3,7 @@
     <head>
         <meta charset="ISO-8859-1">
         <title>Hospital Management System</title>
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet"
@@ -20,7 +21,7 @@
         src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script
         src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link rel="stylesheet" href="css/register.css" type="text/css" />
     </head>
     <style type="text/css">
         body {
@@ -61,7 +62,7 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        
+
                     </li>
                 </div>
             </div>
@@ -71,31 +72,39 @@
                 <b>Hospital Management System</b>
             </h1>
         </div>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <!-- Tabs Titles -->
-                <h2>User Login</h2>
-                <!-- Icon -->
-                <div class="fadeIn first">
+        <!-- Sing in  Form -->
+        <form action="<%=request.getContextPath()%>/AdminLogin" method="post">
+            <section class="sign-in">
+                <div class="container">
+                    <div class="signin-content">
+                        <div class="signin-image">
+                            <figure><img src="img/signin-image.jpg" alt="sing up image"></figure>
+                            <a href="adminRegister.jsp" class="signup-image-link">Create an account</a>
+                        </div>
 
+                        <div class="signin-form">
+                            <h2 class="form-title">Sign in</h2>
+                            <form method="POST" class="register-form" id="login-form">
+                                <div class="form-group">
+                                    <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input type="text" name="your_name" id="your_name" placeholder="User Name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                    <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                    <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                                </div>
+                                <div class="form-group form-button">
+                                    <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Login Form -->
-                <form action="<%=request.getContextPath()%>/UserLogin" method="post">
-                    <input type="text" id="Username" class="fadeIn second" name="username"
-                           placeholder="Username"> 
-                    <input type="password" id="password"
-                           class="fadeIn third" name="password" placeholder="password"> 
-                    <input
-                        type="submit" class="fadeIn fourth" value="Log In">
-                </form>
-
-                <!-- Remind Passowrd -->
-                <div id="formFooter">
-                    <a class="underlineHover" href="userRegister.jsp">Create Account</a>
-                </div>
-
-            </div>
-        </div>
+            </section>
+        </form>
     </body>
 </html>
