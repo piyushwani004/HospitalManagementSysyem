@@ -7,6 +7,7 @@ package Controller;
 
 import Database.DatabaseConnection;
 import java.io.IOException;
+import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -26,16 +27,16 @@ public class UserLogin extends HttpServlet {
 
     private String user;
     private String pass;
-    
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         try {
             String userp = request.getParameter("username");
             String passp = request.getParameter("password");
             Connection con = DatabaseConnection.initializeDatabase();
-            
+
             String s = "select *from login";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(s);
@@ -44,9 +45,11 @@ public class UserLogin extends HttpServlet {
                 pass = rs.getString(2);
             }
             if (userp.equals(user) && passp.equals(pass)) {
+                
                 RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
                 rd.forward(request, response);
             } else {
+                
                 RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
                 rd.include(request, response);
             }

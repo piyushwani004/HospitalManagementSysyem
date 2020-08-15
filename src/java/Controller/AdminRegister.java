@@ -48,11 +48,6 @@ public class AdminRegister extends HttpServlet {
                 rd.forward(request, response);
             }
 
-            if (passp.equals(rpassp)) {
-                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-                rd.include(request, response);
-            }
-
         } catch (Exception e) {
 
         }

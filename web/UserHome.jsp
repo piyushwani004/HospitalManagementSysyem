@@ -27,6 +27,13 @@
         src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script
         src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        
+        <style>
+            body {
+            background-image: url("img/Medical.jpg");
+            background-color: #cccccc;
+        }
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -47,7 +54,7 @@
                             PATIENT
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Patient</a>
+                            <a class="dropdown-item" href="addpatient.jsp">Add Patient</a>
                             <a class="dropdown-item" href="#">Patient List</a>
                         </div>
                     </li>
