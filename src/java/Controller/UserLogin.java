@@ -7,7 +7,6 @@ package Controller;
 
 import Database.DatabaseConnection;
 import java.io.IOException;
-import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -45,7 +44,7 @@ public class UserLogin extends HttpServlet {
                 pass = rs.getString(2);
             }
             if (userp.equals(user) && passp.equals(pass)) {
-                
+     
                 RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
                 rd.forward(request, response);
             } else {

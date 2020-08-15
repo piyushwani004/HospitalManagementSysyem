@@ -56,7 +56,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="addpatient.jsp">Add Patient</a>
-                            <a class="dropdown-item" href="#">Patient List</a>
+                            <a class="dropdown-item" href="listPatient.jsp">Patient List</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

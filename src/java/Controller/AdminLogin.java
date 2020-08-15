@@ -46,6 +46,7 @@ public class AdminLogin extends HttpServlet {
                 pass = rs.getString(2);
             }
             if (userp.equals(user) && passp.equals(pass)) {
+                
                 RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
                 rd.forward(request, response);
             } else {

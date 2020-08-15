@@ -48,7 +48,7 @@
                 <h3>
                     <b>Hospital Management System</b>
                 </h3>
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" style="margin-right: 70px;">
 
                     <li class="nav-item active">
                         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
@@ -59,7 +59,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="addpatient.jsp">Add Patient</a>
-                            <a class="dropdown-item" href="#">Patient List</a>
+                            <a class="dropdown-item" href="listPatient.jsp">Patient List</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -78,15 +78,6 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Add Doctor</a>
                             <a class="dropdown-item" href="#">View Doctor</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            PATIENT
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Patient</a>
-                            <a class="dropdown-item" href="#">View Patient</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
