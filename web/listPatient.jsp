@@ -39,6 +39,26 @@
                 background-image: url("img/Medical.jpg");
                 background-color: #cccccc;
             }
+            .serchbar
+{
+    width: 100%;
+    height: 10%;
+    margin-top:2%; 
+    margin-left: 100px;
+    margin-bottom: 0%;
+}
+.search
+{
+    width: 80%;
+    height: 35px;
+
+    border-radius: 10px;
+}
+.text-center{
+    color: grey;
+    padding: 10px;
+    margin-top: 0px;
+}
         </style>
     </head>
     <body>
@@ -77,7 +97,11 @@
             </div>
         </nav>
 
-
+        <div class="serchbar">
+            <form action=" " method="post">
+                <input class="search" type="text" name="search" placeholder="Search Here..."/>
+            </form>
+        </div>
         <%
             Connection con = null;
         %>
