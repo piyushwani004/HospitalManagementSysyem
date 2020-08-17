@@ -37,7 +37,9 @@ public class AddDoctor extends HttpServlet {
         try {
             Date todaysDate = new Date();
             DateFormat df2 = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
+            
+            String sid = request.getParameter("id");
+            int id = Integer.parseInt(sid);
             String fname = request.getParameter("fname");
             String lname = request.getParameter("lname");
             String gender = request.getParameter("gender");
@@ -46,27 +48,30 @@ public class AddDoctor extends HttpServlet {
             String email = request.getParameter("email");
             String age = request.getParameter("age");
             String address = request.getParameter("address");
+             String qualification = request.getParameter("qualification");
 
             String DateAndTime = df2.format(todaysDate);
 
             Connection con = DatabaseConnection.initializeDatabase();
-            PreparedStatement pst = con.prepareStatement("insert into doctor values(?,?,?,?,?,?,?,?,?)");
-            pst.setString(9, phone);
-            pst.setString(1, fname);
-            pst.setString(2, lname);
-            pst.setString(3, gender);
-            pst.setString(4, city);
-            pst.setString(5, email);
-            pst.setString(6, age);
-            pst.setString(7, address);
-            pst.setString(8, DateAndTime);
+            PreparedStatement pst = con.prepareStatement("insert into doctor values(?,?,?,?,?,?,?,?,?,?,?)");
+            pst.setInt(1, id);
+            pst.setString(5, phone);
+            pst.setString(2, fname);
+            pst.setString(3, lname);
+            pst.setString(4, gender);
+            pst.setString(6, city);
+            pst.setString(7, email);
+            pst.setString(8, age);
+            pst.setString(9, address);
+            pst.setString(10, DateAndTime);
+            pst.setString(11,qualification);
 
             i = pst.executeUpdate();
             if (i > 0) {
-                RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
                 rd.forward(request, response);
             } else {
-                RequestDispatcher rd = request.getRequestDispatcher("addpatient.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("addDoctor.jsp");
                 rd.forward(request, response);
             }
         } catch (SQLException | ClassNotFoundException ex) {
