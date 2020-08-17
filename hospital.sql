@@ -37,6 +37,37 @@ UNLOCK TABLES;
 /*!40000 ALTER TABLE `adminreg` ENABLE KEYS */;
 
 --
+-- Table structure for table `doctor`
+--
+
+DROP TABLE IF EXISTS `doctor`;
+CREATE TABLE `doctor` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(100) default NULL,
+  `lname` varchar(100) default NULL,
+  `gender` varchar(100) default NULL,
+  `mobile` varchar(100) default NULL,
+  `city` varchar(100) default NULL,
+  `email` varchar(100) default NULL,
+  `age` varchar(100) default NULL,
+  `address` varchar(100) default NULL,
+  `date` varchar(100) default NULL,
+  `qualification` varchar(100) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctor`
+--
+
+
+/*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
+LOCK TABLES `doctor` WRITE;
+INSERT INTO `doctor` VALUES (2,'dr.satish ','wani','mail','8446785909','bhusawal','132@gmai.com','34','narhe, pune','16-08-2020 22:41:48','grajuation');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
+
+--
 -- Table structure for table `login`
 --
 
