@@ -149,17 +149,11 @@
                             <table>
                                 <thead>
                                     <tr class="row100 head">
-                                        <th class="cell100 column0">Id</th>
                                         <th class="cell100 column1">First Name</th>
                                         <th class="cell100 column2">Last Name</th>
-                                        <th class="cell100 column3">Gender</th>
-                                        <th class="cell100 column4">Mobile</th>
-                                        <th class="cell100 column5">City</th>
-                                        <th class="cell100 column6">Email</th>
-                                        <th class="cell100 column7">Age</th>
-                                        <th class="cell100 column8">Address</th>
-                                        <th class="cell100 column9">Date</th>
-                                        <th class="cell100 column10">Qualification</th>
+                                        <th class="cell100 column3">Mobile</th>
+                                        <th class="cell100 column4">Date</th>
+                                        <th class="cell100 column6">Action</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -171,9 +165,9 @@
                                 String sql = "";
                                 String query = request.getParameter("search");
                                 if (query != null) {
-                                    sql = "select * from doctor where fname like '%" + query + "%' or lname like '%" + query + "%' ";
+                                    sql = "select * from recp where fname like '%" + query + "%' or lname like '%" + query + "%' ";
                                 } else {
-                                    sql = "select * from doctor";
+                                    sql = "select * from recp";
                                 }
                                 ResultSet rs = st.executeQuery(sql);
                                 while (rs.next()) {
@@ -182,19 +176,12 @@
                             <table>
                                 <tbody>
                                     <tr class="row100 body">
-                                        <td class="cell100 column0"><%=rs.getInt(1)%></td>
-                                        <td class="cell100 column1"><%=rs.getString(2)%></td>
-                                        <td class="cell100 column2"><%=rs.getString(3)%></td>
-                                        <td class="cell100 column3"><%=rs.getString(4)%></td>
-                                        <td class="cell100 column4"><%=rs.getString(5)%></td>
-                                        <td class="cell100 column5"><%=rs.getString(6)%></td>
-                                        <td class="cell100 column6"><%=rs.getString(7)%></td>
-                                        <td class="cell100 column7"><%=rs.getString(8)%></td>
-                                        <td class="cell100 column8"><%=rs.getString(9)%></td>
-                                        <td class="cell100 column9"><%=rs.getString(10)%></td>
-                                        <td class="cell100 column10"><%=rs.getString(11)%></td>
-                                        <td>
-                                            <a href="addpatient.jsp">Edit</a>
+                                        <td class="cell100 column1"><%=rs.getString(1)%></td>
+                                        <td class="cell100 column2"><%=rs.getString(2)%></td>
+                                        <td class="cell100 column3"><%=rs.getString(3)%></td>
+                                        <td class="cell100 column4"><%=rs.getString(4)%></td>
+                                        <td class="cell100 column6">
+                                            <a href="">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="">Delete</a>                     
                                         </td>

@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Home</title>
+        <title>User Home</title>
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet"
@@ -27,7 +27,8 @@
         src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script
         src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="css/adddataform.css">
+        <link rel="stylesheet" type="text/css" href="css/adddatafrm1.css">
         <style>
             body {
                 background-image: url("img/Medical.jpg");
@@ -51,7 +52,7 @@
                 <ul class="navbar-nav ml-auto" style="margin-right: 70px;">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="AdminHome.jsp">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -76,8 +77,8 @@
                             RECEPTIONIST
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="addRecp.jsp">Add Receptonist</a>
-                            <a class="dropdown-item" href="adminRecpList.jsp">View Receptonist</a>
+                            <a class="dropdown-item" href="addRecp.jsp">Add Receptionist</a>
+                            <a class="dropdown-item" href="adminRecpList.jsp">View Receptionist</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -92,5 +93,70 @@
                 </ul>
             </div>
         </nav>
+
+
+        <div class="container-contact100">
+
+
+            <div class="wrap-contact100">
+                <div class="contact100-form-title" style="background-image: url(img/bg-01.jpg);">
+                    <span class="contact100-form-title-1">
+                        Receptionist Registration Form
+                    </span>				
+                </div>
+
+                <form class="contact100-form validate-form"  action="<%=request.getContextPath()%>/AddRecp" method="post">
+
+                    <div class="wrap-input100 validate-input" data-validate="First Name is required">
+                        <span class="label-input100">First_Name:</span>
+                        <input class="input100" type="text" name="fname" placeholder="Enter First name">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Last Name is required">
+                        <span class="label-input100">Last_Name:</span>
+                        <input class="input100" type="text" name="lname" placeholder="Enter Last name">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Phone is required">
+                        <span class="label-input100">Phone:</span>
+                        <input class="input100" type="text" name="Mobile" placeholder="Enter phone number">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="container-contact100-form-btn">
+                        <button class="contact100-form-btn">
+                            <span>
+                                Submit
+                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div id="dropDownSelect1"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+        <script src="js/map-custom.js"></script>
+        <!--===============================================================================================-->
+        <script src="js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-23581568-13');
+        </script>
+
+
     </body>
 </html>
