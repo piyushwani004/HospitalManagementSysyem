@@ -7,6 +7,7 @@ package Controller;
 
 import Database.DatabaseConnection;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -30,7 +31,7 @@ public class UserLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        PrintWriter pw = response.getWriter();
         try {
             String userp = request.getParameter("username");
             String passp = request.getParameter("password");
@@ -44,13 +45,19 @@ public class UserLogin extends HttpServlet {
                 pass = rs.getString(2);
             }
             if (userp.equals(user) && passp.equals(pass)) {
-     
-                RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
-                rd.forward(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Login Successfully..!');");
+                pw.println("window.location.href = \"UserHome.jsp\";");
+                pw.println("</script>");
+                //RequestDispatcher rd = request.getRequestDispatcher("UserHome.jsp");
+                //rd.forward(request, response);
             } else {
-                
-                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-                rd.include(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Username or Password is Incorrect..!');");
+                pw.println("window.location.href = \"index.jsp\";");
+                pw.println("</script>");
+                // RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                // rd.include(request, response);
             }
         } catch (Exception e) {
 

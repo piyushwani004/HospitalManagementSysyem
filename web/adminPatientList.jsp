@@ -67,6 +67,9 @@
             :-moz-placeholder {
                 text-align: center;
             }
+            .mybutton{
+                display: inline;
+            }
         </style>
     </head>
     <body>
@@ -79,7 +82,11 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <h3>
+                    <b>Hospital Management System</b>
+                </h3>
+                <ul class="navbar-nav ml-auto" style="margin-right: 70px;">
+
                     <li class="nav-item active">
                         <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -89,16 +96,34 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="addpatient.jsp">Add Patient</a>
-                            <a class="dropdown-item" href="listPatient.jsp">Patient List</a>
+                            <a class="dropdown-item" href="adminPatientList.jsp">Patient List</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Billing
+                            DOCTOR
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Bill</a>
-                            <a class="dropdown-item" href="#">View Bill</a>
+                            <a class="dropdown-item" href="addDoctor.jsp">Add Doctor</a>
+                            <a class="dropdown-item" href="adminDoctorList.jsp">View Doctor</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            RECEPTIONIST
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Add Doctor</a>
+                            <a class="dropdown-item" href="#">View Doctor</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            WORKER
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Add Worker</a>
+                            <a class="dropdown-item" href="#">View Worker</a>
                         </div>
                     </li>
                 </ul>
@@ -110,6 +135,9 @@
                 <input class="search" type="text" name="search" placeholder="Search Here..."/>
             </form>
         </div>
+        
+
+
         <%
             Connection con = null;
         %>
@@ -130,6 +158,7 @@
                                         <th class="cell100 column7">Address</th>
                                         <th class="cell100 column8">Date</th>
                                         <th class="cell100 column9">Mobile</th>
+                                        <th class="cell100 column10">Action</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -161,6 +190,11 @@
                                         <td class="cell100 column7"><%=rs.getString(7)%></td>
                                         <td class="cell100 column8"><%=rs.getString(8)%></td>
                                         <td class="cell100 column9"><%=rs.getString(9)%></td>
+                                        <td>
+                                            <a href="addpatient.jsp">Edit</a>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="">Delete</a>                     
+                                        </td>
                                     </tr>
                                 </tbody>
                                 <%

@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Home</title>
+        <title>Admin Home</title>
         <link rel="stylesheet"
               href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <link rel="stylesheet"
@@ -59,7 +59,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="addpatient.jsp">Add Patient</a>
-                            <a class="dropdown-item" href="listPatient.jsp">Patient List</a>
+                            <a class="dropdown-item" href="adminPatientList.jsp">Patient List</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -67,8 +67,8 @@
                             DOCTOR
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Doctor</a>
-                            <a class="dropdown-item" href="#">View Doctor</a>
+                            <a class="dropdown-item" href="addDoctor.jsp">Add Doctor</a>
+                            <a class="dropdown-item" href="adminDoctorList.jsp">View Doctor</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">

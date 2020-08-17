@@ -22,22 +22,21 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Admin piyush
  */
-
 @WebServlet("/AdminLogin")
 public class AdminLogin extends HttpServlet {
 
     private String user;
     private String pass;
-  
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        PrintWriter pw = response.getWriter();
         try {
             String userp = request.getParameter("your_name");
             String passp = request.getParameter("your_pass");
             Connection con = DatabaseConnection.initializeDatabase();
-            
+
             String s = "select *from adminreg";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(s);
@@ -46,17 +45,24 @@ public class AdminLogin extends HttpServlet {
                 pass = rs.getString(2);
             }
             if (userp.equals(user) && passp.equals(pass)) {
-                
-                RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
-                rd.forward(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Login Successfully..!');");
+                pw.println("window.location.href = \"AdminHome.jsp\";");
+                pw.println("</script>");
+                //RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
+                //rd.forward(request, response);
             } else {
-                RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
-                rd.include(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Username or Password is Incorrect..!');");
+                pw.println("window.location.href = \"index.jsp\";");
+                pw.println("</script>");
+                //RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+                //rd.include(request, response);
             }
         } catch (Exception e) {
 
         }
-        
+
     }
 
 }
