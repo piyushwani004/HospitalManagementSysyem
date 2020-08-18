@@ -153,7 +153,7 @@
                                         <th class="cell100 column2">Last Name</th>
                                         <th class="cell100 column3">Mobile</th>
                                         <th class="cell100 column4">Date</th>
-                                        <th class="cell100 column6">Action</th>
+                                        <th class="cell100 column5">Action</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -180,7 +180,7 @@
                                         <td class="cell100 column2"><%=rs.getString(2)%></td>
                                         <td class="cell100 column3"><%=rs.getString(3)%></td>
                                         <td class="cell100 column4"><%=rs.getString(4)%></td>
-                                        <td class="cell100 column6">
+                                        <td class="cell100 column5">
                                             <a href="">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="">Delete</a>                     

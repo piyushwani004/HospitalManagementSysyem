@@ -190,7 +190,7 @@
                                         <td class="cell100 column7"><%=rs.getString(7)%></td>
                                         <td class="cell100 column8"><%=rs.getString(8)%></td>
                                         <td class="cell100 column9"><%=rs.getString(9)%></td>
-                                        <td>
+                                        <td class="cell100 column10">
                                             <a href="addpatient.jsp">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="">Delete</a>                     

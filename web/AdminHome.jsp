@@ -172,14 +172,14 @@
 
 
         <div class="row mb-3">
-            <div class="col-xl-3 col-lg-6" style="margin-top: 20px;">
+            <div class="col-xl-3 col-lg-6" style="margin-top: 20px; ">
                 <div class="card card-inverse card-success">
                     <div class="card-block bg-success">
                         <div class="rotate">
                             <i class="fa fa-user fa-5x"></i>
                         </div>
-                        <h6 class="text-uppercase" style=""><a href="adminPatientList.jsp">Patient</a></h6>
-                        <h1 class="display-1">134</h1>
+                        <h6 class="text-uppercase" style="text-align: center;"><a href="adminPatientList.jsp">Patient</a></h6>
+                        <h1 class="display-1" style="text-align: center">134</h1>
                     </div>
                 </div>
             </div>
@@ -189,8 +189,8 @@
                         <div class="rotate">
                             <i class="fa fa-list fa-4x"></i>
                         </div>
-                        <h6 class="text-uppercase"><a href="adminDoctorList.jsp">Doctor</a></h6>
-                        <h1 class="display-1">87</h1>
+                        <h6 class="text-uppercase" style="text-align: center"><a href="adminDoctorList.jsp">Doctor</a></h6>
+                        <h1 class="display-1" style="text-align: center">87</h1>
                     </div>
                 </div>
             </div>
@@ -200,8 +200,8 @@
                         <div class="rotate">
                             <i class="fa fa-twitter fa-5x"></i>
                         </div>
-                        <h6 class="text-uppercase"><a href="adminRecpList.jsp">Receptionist</a></h6>
-                        <h1 class="display-1">02</h1>
+                        <h6 class="text-uppercase" style="text-align: center"><a href="adminRecpList.jsp">Receptionist</a></h6>
+                        <h1 class="display-1" style="text-align: center">02</h1>
                     </div>
                 </div>
             </div>
@@ -211,8 +211,8 @@
                         <div class="rotate">
                             <i class="fa fa-share fa-5x"></i>
                         </div>
-                        <h6 class="text-uppercase">Worker</h6>
-                        <h1 class="display-1">36</h1>
+                        <h6 class="text-uppercase" style="text-align: center">Worker</h6>
+                        <h1 class="display-1" style="text-align: center">36</h1>
                     </div>
                 </div>
             </div>
