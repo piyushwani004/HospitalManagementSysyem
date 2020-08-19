@@ -140,6 +140,30 @@ LOCK TABLES `recp` WRITE;
 INSERT INTO `recp` VALUES ('abc','abc','8446785909','17-08-2020 15:57:44');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `recp` ENABLE KEYS */;
+
+--
+-- Table structure for table `worker`
+--
+
+DROP TABLE IF EXISTS `worker`;
+CREATE TABLE `worker` (
+  `fname` varchar(100) default NULL,
+  `lname` varchar(100) default NULL,
+  `mobile` varchar(100) NOT NULL,
+  `date` varchar(100) default NULL,
+  PRIMARY KEY  (`mobile`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `worker`
+--
+
+
+/*!40000 ALTER TABLE `worker` DISABLE KEYS */;
+LOCK TABLES `worker` WRITE;
+INSERT INTO `worker` VALUES ('aaa','bbb','965532123','18-08-2020 18:51:31');
+UNLOCK TABLES;
+/*!40000 ALTER TABLE `worker` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
