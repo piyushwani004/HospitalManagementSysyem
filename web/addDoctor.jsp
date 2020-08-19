@@ -86,8 +86,8 @@
                             WORKER
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Worker</a>
-                            <a class="dropdown-item" href="#">View Worker</a>
+                            <a class="dropdown-item" href="addWorker.jsp">Add Worker</a>
+                            <a class="dropdown-item" href="adminWorkerList.jsp">View Worker</a>
                         </div>
                     </li>
                 </ul>

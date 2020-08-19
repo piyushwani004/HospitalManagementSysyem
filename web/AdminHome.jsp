@@ -4,6 +4,10 @@
     Author     : Admin
 --%>
 
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="Database.DatabaseConnection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -112,6 +116,10 @@
         </style>
     </head>
     <body>
+        <%
+            Connection con = null;
+        %>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a href="#" class="navbar-brand"> <img src="img/2855.jpeg"
                                                    height="30" width="100" alt="HospitalManagementSystem">
@@ -161,15 +169,23 @@
                             WORKER
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Worker</a>
-                            <a class="dropdown-item" href="#">View Worker</a>
+                            <a class="dropdown-item" href="addWorker.jsp">Add Worker</a>
+                            <a class="dropdown-item" href="adminWorkerList.jsp">View Worker</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
 
-
+        <%
+            try {
+                con = DatabaseConnection.initializeDatabase();
+                Statement st = (Statement) con.createStatement();
+                String query = "select count(*) from patient";
+                ResultSet rs = st.executeQuery(query);
+                while (rs.next()) {
+                    int patient = rs.getInt(1);
+        %>
 
         <div class="row mb-3">
             <div class="col-xl-3 col-lg-6" style="margin-top: 20px; ">
@@ -179,10 +195,26 @@
                             <i class="fa fa-user fa-5x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center;"><a href="adminPatientList.jsp">Patient</a></h6>
-                        <h1 class="display-1" style="text-align: center">134</h1>
+                        <h1 class="display-1" style="text-align: center"><%= patient%></h1>
                     </div>
                 </div>
             </div>
+            <%
+                    }
+                    con.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            %>
+            <%
+                try {
+                    con = DatabaseConnection.initializeDatabase();
+                    Statement st = (Statement) con.createStatement();
+                    String query = "select count(*) from doctor";
+                    ResultSet rs = st.executeQuery(query);
+                    while (rs.next()) {
+                        int doctor = rs.getInt(1);
+            %>
             <div class="col-xl-3 col-lg-6" style="margin-top: 20px;">
                 <div class="card card-inverse card-danger">
                     <div class="card-block bg-danger">
@@ -190,10 +222,26 @@
                             <i class="fa fa-list fa-4x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center"><a href="adminDoctorList.jsp">Doctor</a></h6>
-                        <h1 class="display-1" style="text-align: center">87</h1>
+                        <h1 class="display-1" style="text-align: center"><%= doctor%></h1>
                     </div>
                 </div>
             </div>
+            <%
+                    }
+                    con.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            %>
+            <%
+                try {
+                    con = DatabaseConnection.initializeDatabase();
+                    Statement st = (Statement) con.createStatement();
+                    String query = "select count(*) from recp";
+                    ResultSet rs = st.executeQuery(query);
+                    while (rs.next()) {
+                        int recp = rs.getInt(1);
+            %>
             <div class="col-xl-3 col-lg-6" style="margin-top: 20px;">
                 <div class="card card-inverse card-info">
                     <div class="card-block bg-info">
@@ -201,23 +249,45 @@
                             <i class="fa fa-twitter fa-5x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center"><a href="adminRecpList.jsp">Receptionist</a></h6>
-                        <h1 class="display-1" style="text-align: center">02</h1>
+                        <h1 class="display-1" style="text-align: center"><%= recp%></h1>
                     </div>
                 </div>
             </div>
+            <%
+                    }
+                    con.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            %>
+            <%
+                try {
+                    con = DatabaseConnection.initializeDatabase();
+                    Statement st = (Statement) con.createStatement();
+                    String query = "select count(*) from worker";
+                    ResultSet rs = st.executeQuery(query);
+                    while (rs.next()) {
+                        int worker = rs.getInt(1);
+            %>
             <div class="col-xl-3 col-lg-6" style="margin-top: 20px;">
                 <div class="card card-inverse card-warning">
                     <div class="card-block bg-warning">
                         <div class="rotate">
                             <i class="fa fa-share fa-5x"></i>
                         </div>
-                        <h6 class="text-uppercase" style="text-align: center">Worker</h6>
-                        <h1 class="display-1" style="text-align: center">36</h1>
+                        <h6 class="text-uppercase" style="text-align: center"><a href="adminWorkerList.jsp">Worker</a></h6>
+                        <h1 class="display-1" style="text-align: center"><%= worker%></h1>
                     </div>
                 </div>
             </div>
         </div>
-
+        <%
+                }
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        %>
 
     </body>
 </html>

@@ -122,8 +122,8 @@
                             WORKER
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Add Worker</a>
-                            <a class="dropdown-item" href="#">View Worker</a>
+                            <a class="dropdown-item" href="addWorker.jsp">Add Worker</a>
+                            <a class="dropdown-item" href="adminWorkerList.jsp">View Worker</a>
                         </div>
                     </li>
                 </ul>
@@ -135,7 +135,7 @@
                 <input class="search" type="text" name="search" placeholder="Search Here..."/>
             </form>
         </div>
-        
+
 
 
         <%
@@ -176,6 +176,7 @@
                                 }
                                 ResultSet rs = st.executeQuery(sql);
                                 while (rs.next()) {
+                                    String mob = rs.getString(9);
                         %>
                         <div class="table100-body js-pscroll">
                             <table>
@@ -191,9 +192,9 @@
                                         <td class="cell100 column8"><%=rs.getString(8)%></td>
                                         <td class="cell100 column9"><%=rs.getString(9)%></td>
                                         <td class="cell100 column10">
-                                            <a href="addpatient.jsp">Edit</a>
+                                            <a href="updatePatient.jsp?mob=<%=mob%>">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="">Delete</a>                     
+                                            <a href="deletePatient.jsp?mob=<%=mob%>">Delete</a>                     
                                         </td>
                                     </tr>
                                 </tbody>

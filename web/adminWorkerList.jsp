@@ -1,5 +1,5 @@
 <%-- 
-    Document   : UserHome
+    Document   : adminWorkerList
     Created on : 15 Aug, 2020, 3:56:36 AM
     Author     : Admin
 --%>
@@ -165,9 +165,9 @@
                                 String sql = "";
                                 String query = request.getParameter("search");
                                 if (query != null) {
-                                    sql = "select * from recp where fname like '%" + query + "%' or lname like '%" + query + "%' ";
+                                    sql = "select * from worker where fname like '%" + query + "%' or lname like '%" + query + "%' ";
                                 } else {
-                                    sql = "select * from recp";
+                                    sql = "select * from worker";
                                 }
                                 ResultSet rs = st.executeQuery(sql);
                                 while (rs.next()) {
