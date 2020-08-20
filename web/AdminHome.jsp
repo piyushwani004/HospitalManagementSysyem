@@ -113,6 +113,10 @@
                 -ms-transform: rotate(-44deg);
                 transform: rotate(-44deg);
             }
+            a{
+                color: white;
+                
+            }
         </style>
     </head>
     <body>
@@ -194,7 +198,7 @@
                         <div class="rotate">
                             <i class="fa fa-user fa-5x"></i>
                         </div>
-                        <h6 class="text-uppercase" style="text-align: center;"><a href="adminPatientList.jsp">Patient</a></h6>
+                        <h6 class="text-uppercase" style="text-align: center; "><a href="adminPatientList.jsp">Patient</a></h6>
                         <h1 class="display-1" style="text-align: center"><%= patient%></h1>
                     </div>
                 </div>
