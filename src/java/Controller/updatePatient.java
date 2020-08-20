@@ -7,9 +7,9 @@ package Controller;
 
 import Database.DatabaseConnection;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,7 +26,8 @@ public class updatePatient extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        PrintWriter pw = response.getWriter();
+        
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
         String gender = request.getParameter("gender");
@@ -38,7 +39,7 @@ public class updatePatient extends HttpServlet {
 
         try {
             Connection con = DatabaseConnection.initializeDatabase();
-            PreparedStatement pst = con.prepareStatement("update patient set fname = ? , lname = ? , gender = ? , city = ? , email = ? , age = ? , address = ?  where mobile = '"+phone+"' ");
+            PreparedStatement pst = con.prepareStatement("update patient set fname = ? , lname = ? , gender = ? , city = ? , email = ? , age = ? , address = ?  where mobile = '" + phone + "' ");
             pst.setString(1, fname);
             pst.setString(2, lname);
             pst.setString(3, gender);
@@ -49,11 +50,19 @@ public class updatePatient extends HttpServlet {
 
             int i = pst.executeUpdate();
             if (i > 0) {
-                RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
-                rd.forward(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Update Successfully..!');");
+                pw.println("window.location.href = \"AdminHome.jsp\";");
+                pw.println("</script>");
+                //RequestDispatcher rd = request.getRequestDispatcher("AdminHome.jsp");
+                //rd.forward(request, response);
             } else {
-                RequestDispatcher rd = request.getRequestDispatcher("updatePatient.jsp");
-                rd.forward(request, response);
+                pw.println("<script type=\"text/javascript\">");
+                pw.println("alert('Failed..! Try Again Later...');");
+                pw.println("window.location.href = \"updatePatient.jsp\";");
+                pw.println("</script>");
+                //RequestDispatcher rd = request.getRequestDispatcher("updatePatient.jsp");
+                //rd.forward(request, response);
             }
             con.close();
         } catch (Exception e) {

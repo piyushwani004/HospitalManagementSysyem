@@ -223,7 +223,7 @@
                 <div class="card card-inverse card-danger">
                     <div class="card-block bg-danger">
                         <div class="rotate">
-                            <i class="fa fa-list fa-4x"></i>
+                            <i class="fa fa-user fa-5x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center"><a href="adminDoctorList.jsp">Doctor</a></h6>
                         <h1 class="display-1" style="text-align: center"><%= doctor%></h1>
@@ -250,7 +250,7 @@
                 <div class="card card-inverse card-info">
                     <div class="card-block bg-info">
                         <div class="rotate">
-                            <i class="fa fa-twitter fa-5x"></i>
+                            <i class="fa fa-user fa-5x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center"><a href="adminRecpList.jsp">Receptionist</a></h6>
                         <h1 class="display-1" style="text-align: center"><%= recp%></h1>
@@ -277,7 +277,7 @@
                 <div class="card card-inverse card-warning">
                     <div class="card-block bg-warning">
                         <div class="rotate">
-                            <i class="fa fa-share fa-5x"></i>
+                            <i class="fa fa-user fa-5x"></i>
                         </div>
                         <h6 class="text-uppercase" style="text-align: center"><a href="adminWorkerList.jsp">Worker</a></h6>
                         <h1 class="display-1" style="text-align: center"><%= worker%></h1>
