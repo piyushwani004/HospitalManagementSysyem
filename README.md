@@ -7,22 +7,31 @@ There are three main actors of the system who going to manage or run the complet
 
 1]Admin: Admin is the main actor who will be responsible for managing Doctors and Receptionists. Below is the task list which will be performed by admin.
  
- 1.Admin can ADD/DELETE/UPDATE a doctor.
+  1.Admin can ADD/DELETE/UPDATE a doctor.
+  
   2.Admin can VIEW the list of doctors.
+  
   3.Admin can ADD/DELETE/UPDATE a receptionist.
+  
   4.Admin can VIEW the list of receptionists.
+  
   5.Admin can ADD/DELETE/UPDATE a patient.
+  
   6.Admin can ADD/DELETE/UPDATE a appointments.
   
 2]Doctor:
   
   1.Doctor can check the appointment and the patient list.
+  
    2.Doctor can VIEW the appointments.
+   
    3.The doctor can VIEW the patient list.
+   
    
 3]Receptionist:
   
   1.Receptionist can ADD/EDIT/VIEW appointments.
+  
    2.Receptionist can ADD/EDIT/VIEW patient .
    
    
