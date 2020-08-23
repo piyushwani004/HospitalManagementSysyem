@@ -44,3 +44,36 @@ Server-side: Servlet.
 Back-end: MYSQL.
 
 Server: Tomcat 8.5.
+
+
+Screenshot:
+
+![Admin Home - Google Chrome 20-08-2020 01_59_35 PM](https://user-images.githubusercontent.com/56467741/90974861-36794f00-e4fd-11ea-946a-c6c35f3de310.png)
+
+![Admin Home - Google Chrome 20-08-2020 02_00_03 PM](https://user-images.githubusercontent.com/56467741/90974864-3a0cd600-e4fd-11ea-92a6-b42f7cd2b338.png)
+
+![Admin Home - Google Chrome 20-08-2020 02_00_38 PM](https://user-images.githubusercontent.com/56467741/90974867-3d07c680-e4fd-11ea-858d-a859e9d55cc3.png)
+
+![Admin Home - Google Chrome 20-08-2020 02_00_59 PM](https://user-images.githubusercontent.com/56467741/90974868-3da05d00-e4fd-11ea-9b33-a8c034763d1e.png)
+
+![Admin Home - Google Chrome 20-08-2020 02_01_58 PM](https://user-images.githubusercontent.com/56467741/90974876-442ed480-e4fd-11ea-88ea-43b334aad466.png)
+
+![Admin Home - Google Chrome 20-08-2020 02_02_23 PM](https://user-images.githubusercontent.com/56467741/90974884-527cf080-e4fd-11ea-8ea5-167850c384b5.png)
+
+![Patient List - Google Chrome 20-08-2020 02_03_16 PM](https://user-images.githubusercontent.com/56467741/90974887-56107780-e4fd-11ea-92bf-e8277556152f.png)
+
+![Admin Home - Google Chrome 20-08-2020 01_58_45 PM](https://user-images.githubusercontent.com/56467741/90974889-5872d180-e4fd-11ea-84aa-e23402ecdea0.png)
+
+![Admin Home - Google Chrome 20-08-2020 01_59_17 PM](https://user-images.githubusercontent.com/56467741/90974898-63c5fd00-e4fd-11ea-897c-57c62515fc4c.png)
+
+
+
+
+
+
+
+
+
+
+
+
