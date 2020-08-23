@@ -62,9 +62,17 @@ Screenshot:
 
 ![Patient List - Google Chrome 20-08-2020 02_03_16 PM](https://user-images.githubusercontent.com/56467741/90974887-56107780-e4fd-11ea-92bf-e8277556152f.png)
 
-![Admin Home - Google Chrome 20-08-2020 01_58_45 PM](https://user-images.githubusercontent.com/56467741/90974889-5872d180-e4fd-11ea-84aa-e23402ecdea0.png)
+
+Admin Login:
 
 ![Admin Home - Google Chrome 20-08-2020 01_59_17 PM](https://user-images.githubusercontent.com/56467741/90974898-63c5fd00-e4fd-11ea-897c-57c62515fc4c.png)
+
+
+Admin Dashboard:
+
+![Admin Home - Google Chrome 20-08-2020 01_58_45 PM](https://user-images.githubusercontent.com/56467741/90974889-5872d180-e4fd-11ea-84aa-e23402ecdea0.png)
+
+
 
 
 
