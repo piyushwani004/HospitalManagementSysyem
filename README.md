@@ -33,16 +33,14 @@ There are three main actors of the system who going to manage or run the complet
   * Receptionist can ADD/EDIT/VIEW patient .
    
    
-**Technology used in the Hospital Management System project in java**
+ # Technology
+   
+Technology used in the Hospital Management System project in java
 
-
-Front -End Jsp, Html, CSS, JS.
-
-Server-side: Servlet.
-
-Back-end: MYSQL.
-
-Server: Tomcat 8.5.
+* Front -End Jsp, Html, CSS, JS.
+* Server-side: Servlet.
+* Back-end: MYSQL.
+* Server: Tomcat 8.5.
 
 
 Screenshot:
